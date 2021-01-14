@@ -5,6 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "upload": "node upload.js",
+    "deploy": "npm run build && npm run upload",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
@@ -26,13 +28,16 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-plugin-import": "^1.13.3",
+    "chalk": "^4.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^4.3.7",
     "less": "^4.1.0",
     "less-loader": "^7.2.1",
+    "ora": "^5.2.0",
     "postcss-pxtorem": "^5.1.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "scp2": "^0.5.0",
     "ts-import-plugin": "^1.6.7",
     "typescript": "~3.9.3"
   },
