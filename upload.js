@@ -2,7 +2,8 @@ let client = require('scp2');
 const ora = require('ora');
 const chalk = require('chalk');
 const spinner = ora(chalk.green('正在发布到服务器...'))
-
+const fileParams = require('./src/utils/index')
+console.log(fileParams(process.argv))
 spinner.start()
 client.scp('./dist', { // 本地打包的路径
     'host': '192.168.0.226', // 服务器的IP地址

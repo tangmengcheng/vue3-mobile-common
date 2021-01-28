@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "upload": "node upload.js",
+    "upload": "node upload.js --mode='development'",
     "deploy": "npm run build && npm run upload",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
